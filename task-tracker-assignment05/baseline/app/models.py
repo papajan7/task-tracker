@@ -1,0 +1,10 @@
+"""Baseline model before assignment mitigations."""
+
+from dataclasses import dataclass
+
+
+@dataclass
+class Task:
+    id: int
+    title: str
+    status: str = "todo"

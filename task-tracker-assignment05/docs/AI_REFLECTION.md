@@ -1,0 +1,9 @@
+# AI Reflection (200–300 words)
+
+I used ChatGPT (GPT-6) as an AI assistant to help plan and implement this Software Engineering Assignment #05 repository. I provided the assignment requirements and asked for a small Python project that could demonstrate repository instructions, a focused design-pattern decision, risk analysis, automated tests, and a release decision. The assistant received the assignment PDF requirements and the source files created for this repository; it did not receive credentials, production data, or personal information.
+
+One useful suggestion was to use atomic file replacement for JSON persistence. The baseline storage implementation wrote directly to the destination file. I inspected that implementation, changed the final storage module to write and flush a temporary file in the same directory, and then replace the destination. I verified that the replacement operation is called and that the saved JSON can be read back. This test does not simulate power loss or prove behavior on every filesystem, so the remaining limitation is documented.
+
+A weaker suggestion was that a Strategy pattern would automatically improve maintainability. I treated that as a hypothesis rather than accepting it immediately. I compared the baseline conditional sorting branches with the final strategy classes and kept the pattern only as a small example with two actual ordering behaviors. For a permanently tiny application, the extra abstraction may not be worthwhile.
+
+I personally reviewed the changed modules, checked the baseline and final structures, and ran the unit tests and compile check. The tests supported keeping the input validation and persistence changes. The `AGENTS.md` instructions made the permitted files, safe commands, and human review boundary explicit, but they are not a technical sandbox. Next, I would add CI, cross-platform tests, and stronger validation for manually edited JSON files.

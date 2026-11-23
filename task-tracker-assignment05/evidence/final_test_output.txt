@@ -1,0 +1,13 @@
+test_add_task_trims_title_and_persists (test_task_tracker.TaskServiceTests.test_add_task_trims_title_and_persists) ... ok
+test_invalid_json_is_reported_clearly (test_task_tracker.TaskServiceTests.test_invalid_json_is_reported_clearly) ... ok
+test_missing_task_raises_key_error (test_task_tracker.TaskServiceTests.test_missing_task_raises_key_error) ... ok
+test_priority_strategy_orders_active_tasks_first (test_task_tracker.TaskServiceTests.test_priority_strategy_orders_active_tasks_first) ... ok
+test_rejects_empty_or_whitespace_title (test_task_tracker.TaskServiceTests.test_rejects_empty_or_whitespace_title) ... ok
+test_rejects_invalid_status_without_changing_file (test_task_tracker.TaskServiceTests.test_rejects_invalid_status_without_changing_file) ... ok
+test_save_uses_atomic_replace (test_task_tracker.TaskServiceTests.test_save_uses_atomic_replace) ... ok
+test_updates_status_and_deletes_task (test_task_tracker.TaskServiceTests.test_updates_status_and_deletes_task) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.024s
+
+OK
